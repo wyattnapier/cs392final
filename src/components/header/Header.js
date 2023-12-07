@@ -1,5 +1,6 @@
-import React from 'react'
-import { Typewriter } from 'react-simple-typewriter'
+import React from 'react';
+import { Typewriter } from 'react-simple-typewriter'; // https://www.npmjs.com/package/react-simple-typewriter
+import "./Header.css";
 
 const Header = () => {
 
@@ -13,7 +14,7 @@ const Header = () => {
   }
 
   return (
-    <div className='App'>
+    <div className='HeaderWrapper'>
       <h1 style={{ paddingTop: '5rem', margin: 'auto 0', fontWeight: 'normal' }}>
         Do you prefer{' '}
         <span style={{ color: 'red', fontWeight: 'bold' }}>
