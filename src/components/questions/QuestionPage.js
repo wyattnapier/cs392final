@@ -1,14 +1,14 @@
 import React, {useEffect, useState} from "react";
 import "./Question";
 import Question from "./Question";
-import DogPersonPage from "../home/DogPersonPage";
-import CatPersonPage from "../home/CatPerson";
+import DogPersonPage from "../result-pages/DogPersonPage";
+import CatPersonPage from "../result-pages/CatPerson";
 
 
 
 function QuestionPage(){
     const questions = [
-        "1. On a scale of 0-10, how much do you value independence in a pet?",
+        "1. On a scale of 0-10, how dependent do you want your pet to be?",
         "2. On a scale of 0-10, how much time are you willing to spend playing with your pet each day?",
         "3. On a scale of 0-10, how much care would you like to take of your pet's grooming?",
         "4. On a scale of 0-10, how important is loyalty in a pet to you?",
