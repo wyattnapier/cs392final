@@ -1,6 +1,8 @@
 import React, {useState} from "react";
 import "./Question-Component";
-import {Questions} from "./Question-Component";
+import Questions from "./Question-Component";
+import DogPersonPage from "../home/DogPerson";
+import CatPersonPage from "../home/CatPerson";
 
 
 
@@ -45,7 +47,7 @@ export function Question(){
                 />
             ) : (
                 // Render the results page
-                totalScore >= 50 ? <DogPage/> : <CatPage/>
+                totalScore >= 50 ? <DogPersonPage/> : <CatPersonPage/>
             )}
         </div>
     );
