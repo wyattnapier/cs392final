@@ -29,4 +29,4 @@ const CatPersonPage = () => {
     );
 };
 
-export default DogPersonPage;
+export default CatPersonPage;
