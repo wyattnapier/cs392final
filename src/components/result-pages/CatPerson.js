@@ -4,6 +4,11 @@ import "./Results.css";
 import cats from "../../images/Hero Pedigree Cats.jpg";
 import dogs from "../../images/Three-Australian-Shepherd-puppies-sitting-in-a-field.jpg";
 
+
+/*
+    CatPersonPage will be displayed if the total score is less than 50
+    It gives some information on cats
+ */
 const CatPersonPage = () => {
     return (
         <div className = "page-wrapper">

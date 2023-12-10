@@ -11,6 +11,10 @@ import {BrowserRouter, Route, Router, Routes} from "react-router-dom";
 import Home from "./components/home/Home";
 // import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
+/*
+  App.js is used tor render the final page. It also includes a router for some
+  useful routes used elsewhere in the program
+ */
 function App() {
   return (
       <div className = "app-wrapper">
