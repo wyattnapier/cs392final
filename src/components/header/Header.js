@@ -35,7 +35,7 @@ const Header = () => {
             cursorStyle='_'
             typeSpeed={70}
             deleteSpeed={50}
-            delaySpeed={1000} {/* pause after string is typed out so it can be read */}
+            delaySpeed={1000}
             onLoopDone={handleDone}
             onType={handleType}
           />
