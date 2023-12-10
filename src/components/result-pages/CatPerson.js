@@ -1,14 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import "./Results.css";
+import cats from "../../images/Hero Pedigree Cats.jpg";
+import dogs from "../../images/Three-Australian-Shepherd-puppies-sitting-in-a-field.jpg";
 
 const CatPersonPage = () => {
     return (
-        <div>
-            <header style={{ backgroundColor: '#333', color: 'white', padding: '1em', fontSize: '1.5em' }}>
-                <h1>You Are a Cat Person</h1>
-            </header>
+        <div className = "page-wrapper">
 
-            <main style={{ padding: '2em' }}>
+            <div className = "wrapper">
+                <h1>You Are a Cat Person</h1>
                 <p>Embrace your love for cats!</p>
                 <p>Because you are a cat person, here are some reasons why cats make wonderful companions:</p>
                 <ul>
@@ -20,11 +21,10 @@ const CatPersonPage = () => {
                     <li>Independence</li>
                 </ul>
                 <p>If you don't have a cat already, you should find one on the street to adopt!</p>
-            </main>
-
-            <footer style={{ backgroundColor: '#333', color: 'white', padding: '1em', position: 'fixed', bottom: '0', width: '100%' }}>
-                <p>© 2023 You Are a Cat Person</p>
-            </footer>
+                <div className = "image-container">
+                    <img src = {cats} alt = "a bunch of cats"/>
+                </div>
+            </div>
         </div>
     );
 };

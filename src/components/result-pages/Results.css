@@ -1,0 +1,12 @@
+.page-wrapper{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    font-family: "Lucida Console";
+    color: white;
+    font-size: calc(1px + 1.1vw);
+}
+
+li{
+    list-style: none;
+}

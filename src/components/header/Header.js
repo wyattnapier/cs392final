@@ -1,6 +1,8 @@
 import React from 'react';
 import { Typewriter } from 'react-simple-typewriter'; // https://www.npmjs.com/package/react-simple-typewriter
 import "./Header.css";
+import {Link, NavLink} from "react-router-dom";
+import Home from "../home/Home";
 
 const Header = () => {
 
@@ -15,7 +17,8 @@ const Header = () => {
 
   return (
     <div className='HeaderWrapper'>
-      <h1 style={{ paddingTop: '5rem', margin: 'auto 0', fontWeight: 'normal' }}>
+      <NavLink className = "header-to-home" to = "/" style = {{textDecoration: "none", color: 'white'}}>
+      <h1 style={{padding: "2vw", margin: 'auto 0', fontWeight: 'normal' }}>
         Do you prefer{' '}
         <span style={{ color: 'red', fontWeight: 'bold' }}>
           {/* Style will be inherited from the parent element */}
@@ -32,6 +35,7 @@ const Header = () => {
           />
         </span>
       </h1>
+      </NavLink>
     </div>
   )
 }

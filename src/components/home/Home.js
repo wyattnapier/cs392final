@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 import QuestionPage from "../questions/QuestionPage";
+import "./Home.css";
+import cat from "../../images/cat.jpg";
+import dog from "../../images/dog.jpg";
+import {NavLink} from "react-router-dom";
 
 function HomePage() {
 
@@ -13,32 +17,30 @@ function HomePage() {
         fontWeight: "bold",
     };
 
-    const [showQuiz, setShowQuiz] = useState(false);
+    //const [showQuiz, setShowQuiz] = useState(false);
 
-    const startQuiz = () => {
-        setShowQuiz(true);
-    };
+    //const startQuiz = () => {
+      //  setShowQuiz(true);
+    //};
 
     return (
         <div className="homepage">
-            {!showQuiz ? (
-                <div>
-                    <header style={{ backgroundColor: '#333', color: 'white', padding: '1em', fontSize: '1.5em' }}>
-                        <h1>Do You Prefer Cats or Dogs?</h1>
-                    </header>
-                    <main style={{ padding: '10px', fontSize: '20px', }}>
-                    <p>Welcome to our quiz website where you find out whether you are a cat or dog person</p>
 
-                    <button style={buttonStyle} onClick={startQuiz}>Start The Quiz</button>
-                    </main>
-
+                <div className = "homepage-wrapper">
+                <div className= "cat-wrapper">
+                    <img src = {cat} alt = "cat image"/>
                 </div>
-            ) : (
-                <QuestionPage />
-            )}
-            <footer style={{ backgroundColor: '#333', color: 'white', padding: '1em', position: 'fixed', bottom: '0', width: '100%' }}>
-                <p>© 2023 All Rights Reserved</p>
-            </footer>
+                <div className = "text-wrapper">
+                    <p>Welcome to our quiz website where you find out whether you are a cat or dog person</p>
+                    <NavLink to = "/QuestionPage">
+                    <button style={buttonStyle}>Start The Quiz</button>
+                    </NavLink>
+                    <p></p>
+                </div>
+                    <div className= "dog-wrapper">
+                        <img src = {dog} alt = "dog image"/>
+                    </div>
+                </div>
         </div>
     );
 }
