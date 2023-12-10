@@ -1,9 +1,18 @@
 .HeaderWrapper {
-  margin: auto;
+  margin: 0;
   background-color: darkblue;
   color: white;
+  display: flex;
+  justify-content: center;
+
 }
 
 h1 {
   padding: 3vw auto;
+  font-size: calc(2px + 2vw);
+  font-family: "Lucida Console";
+}
+
+.header-to-home{
+  text-decoration: none;
 }

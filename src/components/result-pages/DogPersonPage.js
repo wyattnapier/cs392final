@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import "./Results.css";
+import dogs from "../../images/Three-Australian-Shepherd-puppies-sitting-in-a-field.jpg";
 
 const DogPersonPage = () => {
     return (
-        <div>
-            <header style={{ backgroundColor: '#333', color: 'white', padding: '1em', fontSize: '1.5em' }}>
-                <h1>You Are a Dog Person</h1>
-            </header>
+        <div className = "page-wrapper">
 
-            <main style={{ padding: '2em' }}>
+            <div className = "wrapper">
+                <h1>You Are a Dog Person</h1>
                 <p>Embrace your love for dogs!</p>
                 <p>Because you are a dog person, here are some reasons why dogs make amazing companions:</p>
                 <ul>
@@ -19,11 +19,11 @@ const DogPersonPage = () => {
                     <li>Teaches responsibility and empathy</li>
                 </ul>
                 <p>If you don't have a dog already, you should look into getting one!</p>
-            </main>
+                <div className = "image-container">
+                    <img src = {dogs} alt = "three dogs sitting"/>
+                </div>
+            </div>
 
-            <footer style={{ backgroundColor: '#333', color: 'white', padding: '1em', position: 'fixed', bottom: '0', width: '100%' }}>
-                <p>© 2023 You Are a Dog Person</p>
-            </footer>
         </div>
     );
 };

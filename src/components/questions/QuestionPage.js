@@ -3,6 +3,8 @@ import "./Question";
 import Question from "./Question";
 import DogPersonPage from "../result-pages/DogPersonPage";
 import CatPersonPage from "../result-pages/CatPerson";
+import "./question.css"
+import questionImage from "../../images/attachment-Untitled-design-2023-10-10T095546.407.jpg";
 
 
 
@@ -40,10 +42,15 @@ function QuestionPage(){
         <div className = "question-div">
             {currentQuestionIndex < questions.length ? (
                 // Render the current question
+                <div className = "wrapper">
                 <Question
                     question={questions[currentQuestionIndex]}
                     onNextQuestion={handleNextQuestion}
                 />
+                <div className = "image-container">
+                    <img src = {questionImage} alt = "dog and cat with question mark"/>
+                </div>
+                </div>
             ) : (
                 // Render the results page
                 totalScore >= 50 ? (<DogPersonPage/>) : (<CatPersonPage/>)

@@ -1,6 +1,8 @@
 import React from 'react';
 import { Typewriter } from 'react-simple-typewriter'; // https://www.npmjs.com/package/react-simple-typewriter
 import "./Header.css";
+import {Link, NavLink} from "react-router-dom";
+import Home from "../home/Home";
 
 /* 
   This component creates a header across the top of the page using the react-simple-typewriter effect
@@ -20,9 +22,11 @@ const Header = () => {
 
   return (
     <div className='HeaderWrapper'>
-      <h1 style={{ paddingTop: '5rem', margin: 'auto 0', fontWeight: 'normal' }}>
-        Do you prefer{' '} {/* starting string */}
-        <span style={{ color: 'red', fontWeight: 'bold' }}> {/* chunk that is added/deleted to loop between the two*/}
+      <NavLink className = "header-to-home" to = "/" style = {{textDecoration: "none", color: 'white'}}>
+      <h1 style={{padding: "2vw", margin: 'auto 0', fontWeight: 'normal' }}>
+        Do you prefer{' '}
+        <span style={{ color: 'red', fontWeight: 'bold' }}>
+
           {/* Style will be inherited from the parent element */}
           <Typewriter
             words={['Cats?', 'Dogs?']}
@@ -37,6 +41,7 @@ const Header = () => {
           />
         </span>
       </h1>
+      </NavLink>
     </div>
   )
 }

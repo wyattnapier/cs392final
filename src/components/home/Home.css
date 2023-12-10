@@ -1,0 +1,29 @@
+.homepage{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: black;
+    padding: 4vw;
+}
+
+.homepage-wrapper{
+    display: flex;
+    flex-direction: row;
+}
+
+.text-wrapper{
+    font-size: calc(1px + 1.5vw);
+    color: white;
+    font-family: "Lucida Console"
+}
+p{
+    padding: 1vw;
+}
+
+.cat-wrapper{
+    margin: 0;
+}
+
+img{
+    width: 100%;
+}
