@@ -1,6 +1,8 @@
 import React from 'react';
 import "./Footer.css";
-
+/*
+    Footer Component which displays copyright information
+ */
 const Footer = () => {
     return (
         <div className = "footer">

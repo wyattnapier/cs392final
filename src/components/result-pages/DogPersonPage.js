@@ -3,6 +3,11 @@ import ReactDOM from 'react-dom/client';
 import "./Results.css";
 import dogs from "../../images/Three-Australian-Shepherd-puppies-sitting-in-a-field.jpg";
 
+
+/*
+    DogPersonPage will be displayed if the total score is greater than or equal to 50
+    It gives some information on dogs
+ */
 const DogPersonPage = () => {
     return (
         <div className = "page-wrapper">

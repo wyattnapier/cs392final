@@ -10,10 +10,18 @@ const buttonStyle = {
     fontSize: "16px",
     fontWeight: "bold",
 };
-const Question = ({ question, onNextQuestion }) => {
-    const [answer, setAnswer] = useState(0);
 
-    const handleNextQuestion = () => {
+/*
+    This component is the Question component. Based on input
+    from the QuestionPage component, it will render a question to be
+    displayed within QuestionPage. Each question has an actual question,
+    a slider which is a range from 0-10, and a submit button
+ */
+
+const Question = ({ question, onNextQuestion }) => {
+    const [answer, setAnswer] = useState(0); //create a useState to set answers for each question
+
+    const handleNextQuestion = () => { //function to handle the next question. Sets the initial value to 0
         onNextQuestion(answer);
         setAnswer(0);
     };

@@ -6,7 +6,15 @@ import CatPersonPage from "../result-pages/CatPerson";
 import "./question.css"
 import questionImage from "../../images/attachment-Untitled-design-2023-10-10T095546.407.jpg";
 
-
+/*
+    QuestionPage component serves as the shell for which to display questions.
+    It contains a string array of questions to be answered as well as logic for
+    generating the next question and storing the answers. For each question answered, it will
+    store the value in an integer array which is then summed up to determine the ultimate
+    result
+    At the end, if the result is less than 50 (more aligned with cat behavior), the cat page will be
+    displayed. The same holds if it is 50 or more to display the dog page
+ */
 
 function QuestionPage(){
     const questions = [
@@ -22,9 +30,14 @@ function QuestionPage(){
         "10. On a scale of 0-10, how bad are your allergies?",
     ]
 
-    const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-    const [answers, setAnswers] = useState(Array(questions.length).fill(0));
+    const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0); //useState to hold the index so we know what question to display
+    const [answers, setAnswers] = useState(Array(questions.length).fill(0)); //useState for an array of answers which is initialized as all 0
 
+    /*
+        The handleNextQuestion function takes, as input, the answer to the current question
+        it then will callback to the previous state and append the new value to the index of the question
+        finally, the function updates the index state to be the next question
+     */
     const handleNextQuestion = (answer) => {
         setAnswers((prevAnswers) => {
             const newAnswers = [...prevAnswers];
@@ -35,7 +48,7 @@ function QuestionPage(){
         setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
     };
 
-    const totalScore = answers.reduce((acc, val) => acc + val, 0);
+    const totalScore = answers.reduce((acc, val) => acc + val, 0);  //calculation for total score, use reduction to sum up the list
     console.log("total: ", totalScore);
 
     return (
